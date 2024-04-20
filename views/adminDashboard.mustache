@@ -1,0 +1,59 @@
+<!-- views/adminDashboard.mustache -->
+
+<h1>Admin Dashboard</h1>
+
+<h2>Manage Users</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#users}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{role}}</td>
+        <td>
+          <form action="/admin/users/{{_id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/users}}
+  </tbody>
+</table>
+
+<h2>Manage Items</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th>Use By Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#items}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{quantity}}</td>
+        <td>{{useByDate}}</td>
+        <td>{{status}}</td>
+        <td>
+          <form action="/admin/items/{{_id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/items}}
+  </tbody>
+</table>

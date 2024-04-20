@@ -1,0 +1,20 @@
+<!-- views/searchResults.mustache -->
+
+<h1>Search Results</h1>
+
+{{#items.length}}
+  <p>Found {{items.length}} item(s):</p>
+  <ul>
+    {{#items}}
+      <li>
+        <h2>{{name}}</h2>
+        <p>{{description}}</p>
+        <p>Quantity: {{quantity}}</p>
+        <p>Use By Date: {{useByDate}}</p>
+      </li>
+    {{/items}}
+  </ul>
+{{/items.length}}
+{{^items.length}}
+  <p>No items found.</p>
+{{/items.length}}

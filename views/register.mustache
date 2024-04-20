@@ -1,0 +1,35 @@
+<!-- views/register.mustache -->
+
+<h1>Register</h1>
+
+{{#errors}}
+  <div class="alert alert-danger">
+    {{#errors}}
+      <p>{{msg}}</p>
+    {{/errors}}
+  </div>
+{{/errors}}
+<form action="/users/register" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <div>
+    <label for="role">Role:</label>
+    <select id="role" name="role" required>
+      <option value="donor">Donor</option>
+      <option value="pantry">Pantry</option>
+    </select>
+  </div>
+  <button type="submit">Register</button>
+</form>
+
+<p>Already have an account? <a href="/login">Login here</a>.</p>

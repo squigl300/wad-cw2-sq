@@ -1,0 +1,33 @@
+<!-- views/profile.mustache -->
+
+<h1>User Profile</h1>
+
+<p>Name: {{user.name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Role: {{user.role}}</p>
+
+{{#itemsAvailable}}
+  <h2>Available Items</h2>
+  {{#items}}
+    <div>
+      <h3>{{name}}</h3>
+      <p>{{description}}</p>
+      <p>Quantity: {{quantity}}</p>
+      <p>Use By Date: {{useByDate}}</p>
+    </div>
+  {{/items}}
+{{/itemsAvailable}}
+
+{{#itemsClaimed}}
+  <h2>Claimed Items</h2>
+  {{#items}}
+    <div>
+      <h3>{{name}}</h3>
+      <p>{{description}}</p>
+      <p>Quantity: {{quantity}}</p>
+      <p>Use By Date: {{useByDate}}</p>
+    </div>
+  {{/items}}
+{{/itemsClaimed}}
+
+<a href="/items/new">Add Item</a>

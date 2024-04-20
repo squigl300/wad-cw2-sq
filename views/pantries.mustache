@@ -1,0 +1,18 @@
+<!-- views/pantries.mustache -->
+
+<h1>Pantries</h1>
+
+{{#pantries}}
+  <div>
+    <h2>{{name}}</h2>
+    <p>Address: {{address}}</p>
+    <p>Phone: {{phone}}</p>
+    <p>Email: {{email}}</p>
+    <a href="/pantries/{{_id}}/edit">Edit</a>
+    <form action="/pantries/{{_id}}?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+{{/pantries}}
+
+<a href="/pantries/new">Add Pantry</a>

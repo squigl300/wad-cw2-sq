@@ -1,0 +1,28 @@
+/* public/css/styles.css */
+
+/* Custom styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Add margin bottom to the navigation menu */
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Add margin bottom to the cards */
+.card {
+  margin-bottom: 20px;
+}
+
+/* Customize the primary button color */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Customize the primary button hover color */
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}

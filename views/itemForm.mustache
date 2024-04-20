@@ -1,0 +1,35 @@
+<!-- views/itemForm.mustache -->
+
+<h1>{{#item}}Edit Item{{/item}}{{^item}}Add Item{{/item}}</h1>
+
+<form action="{{#item}}/items/{{item._id}}?_method=PUT{{/item}}{{^item}}/items{{/item}}" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{item.name}}" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required>{{item.description}}</textarea>
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" value="{{item.quantity}}" required>
+  </div>
+  <div>
+    <label for="useByDate">Use By Date:</label>
+    <input type="date" id="useByDate" name="useByDate" value="{{item.useByDate}}" required>
+  </div>
+  <button type="submit">{{#item}}Update Item{{/item}}{{^item}}Add Item{{/item}}</button>
+<div class="form-group">
+    <label for="category">Category:</label>
+    <select class="form-control" id="category" name="category" required>
+      <option value="">Select a category</option>
+      <option value="Fruits">Fruits</option>
+      <option value="Vegetables">Vegetables</option>
+      <option value="Grains">Grains</option>
+      <option value="Dairy">Dairy</option>
+      <option value="Meat">Meat</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+</form>

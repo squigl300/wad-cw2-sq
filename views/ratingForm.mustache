@@ -1,0 +1,20 @@
+<!-- views/ratingForm.mustache -->
+
+<form action="/items/{{item._id}}/ratings" method="POST">
+  <div class="form-group">
+    <label for="rating">Rating:</label>
+    <select class="form-control" id="rating" name="rating" required>
+      <option value="">Select a rating</option>
+      <option value="1">1 star</option>
+      <option value="2">2 stars</option>
+      <option value="3">3 stars</option>
+      <option value="4">4 stars</option>
+      <option value="5">5 stars</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Rating</button>
+</form>

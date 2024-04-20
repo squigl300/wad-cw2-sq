@@ -1,0 +1,13 @@
+<!-- views/home.mustache -->
+
+<h1>Welcome to Food Share App</h1>
+<p>Connect with local food pantries and donate surplus food items.</p>
+
+{{#user}}
+  <p>Welcome, {{user.name}}!</p>
+  <a href="/items/new">Donate Food</a>
+{{/user}}
+
+{{^user}}
+  <p>Please <a href="/login">login</a> or <a href="/register">register</a> to donate food.</p>
+{{/user}}
